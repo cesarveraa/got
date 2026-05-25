@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABC Inventarios: Analizador Inteligente</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="topbar" aria-label="Principal">
+      <a class="brand" href="#inicio" aria-label="ABC Inventarios inicio">
+        <span class="brand-mark" aria-hidden="true">ABC</span>
+        <span>ABC Inventarios</span>
+      </a>
+      <div class="nav-links">
+        <a href="#explicacion">Guia</a>
+        <a href="#calculadora">Calculadora</a>
+        <a href="#errores">Errores comunes</a>
+      </div>
+    </nav>
+
+    <section class="hero-grid" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow">Gerencia de Operaciones</p>
+        <h1>Calculadora de Análisis ABC de Inventarios</h1>
+        <p class="hero-subtitle">Clasifica tus productos según su importancia económica y entiende paso a paso el resultado.</p>
+        <p class="hero-text">
+          El Análisis ABC es una técnica de clasificación de inventarios basada en el valor anual de consumo. Ayuda a identificar qué productos requieren mayor control, seguimiento y prioridad dentro de una empresa.
+        </p>
+        <div class="formula-card" aria-label="Formula del valor anual de consumo">
+          <span>Valor anual de consumo</span>
+          <strong>Demanda anual × Costo unitario</strong>
+        </div>
+        <div class="hero-actions">
+          <a class="primary-link" href="#calculadora">Resolver ejercicio</a>
+          <a class="secondary-link" href="#explicacion">Repasar concepto</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Visualización de clasificación ABC">
+        <div class="warehouse-card">
+          <div class="warehouse-head">
+            <span class="tiny-icon box-icon" aria-hidden="true"></span>
+            <div>
+              <p>Panel educativo</p>
+              <strong>Valor de inventario</strong>
+            </div>
+          </div>
+          <div class="abc-stack" aria-hidden="true">
+            <div class="abc-row a-row"><span>A</span><strong>80%</strong></div>
+            <div class="abc-row b-row"><span>B</span><strong>95%</strong></div>
+            <div class="abc-row c-row"><span>C</span><strong>100%</strong></div>
+          </div>
+          <div class="mini-chart" aria-hidden="true">
+            <span style="height: 82%"></span>
+            <span style="height: 58%"></span>
+            <span style="height: 38%"></span>
+            <span style="height: 21%"></span>
+            <span style="height: 13%"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section intro-section" id="explicacion">
+      <div class="section-heading">
+        <p class="eyebrow">Idea central</p>
+        <h2>Clasificar por valor, no solo por cantidad</h2>
+        <p>
+          En ABC se calcula cuánto valor económico consume cada producto durante el año. Por eso, un producto con pocas unidades puede ser crítico si su costo unitario es alto.
+        </p>
+      </div>
+
+      <div class="concept-grid">
+        <article class="concept-card accent-a">
+          <span class="tiny-icon money-icon" aria-hidden="true"></span>
+          <h3>Clase A</h3>
+          <p>Pocos productos concentran la mayor parte del valor económico. Necesitan seguimiento cercano y decisiones cuidadosas.</p>
+        </article>
+        <article class="concept-card accent-b">
+          <span class="tiny-icon chart-icon" aria-hidden="true"></span>
+          <h3>Clase B</h3>
+          <p>Productos de importancia intermedia. Requieren revisión periódica y políticas de control moderadas.</p>
+        </article>
+        <article class="concept-card accent-c">
+          <span class="tiny-icon stack-icon" aria-hidden="true"></span>
+          <h3>Clase C</h3>
+          <p>Muchos productos representan una parte pequeña del valor total. Pueden gestionarse con controles más simples.</p>
+        </article>
+      </div>
+
+      <div class="table-shell">
+        <table class="info-table">
+          <caption>Porcentajes típicos del Análisis ABC</caption>
+          <thead>
+            <tr>
+              <th>Clase</th>
+              <th>Artículos aproximados</th>
+              <th>Valor total aproximado</th>
+              <th>Control recomendado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="class-pill class-a">A</span></td>
+              <td>10% a 20%</td>
+              <td>70% a 80%</td>
+              <td>Control estricto.</td>
+            </tr>
+            <tr>
+              <td><span class="class-pill class-b">B</span></td>
+              <td>20% a 30%</td>
+              <td>15% a 25%</td>
+              <td>Control moderado.</td>
+            </tr>
+            <tr>
+              <td><span class="class-pill class-c">C</span></td>
+              <td>50% a 70%</td>
+              <td>5% a 10%</td>
+              <td>Control simple.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Estos porcentajes son aproximados. En esta herramienta se usan límites académicos de 80% y 95% acumulado para practicar ejercicios.</p>
+    </section>
+
+    <section class="section calculator-section" id="calculadora">
+      <div class="section-heading compact">
+        <p class="eyebrow">Herramienta interactiva</p>
+        <h2>Ingresa productos y calcula la clasificación</h2>
+        <p>Completa la tabla o pega un enunciado. Antes de calcular, revisa que cada producto tenga demanda anual y costo unitario.</p>
+      </div>
+
+      <div class="workspace-grid">
+        <section class="panel problem-panel" aria-labelledby="problem-title">
+          <div class="panel-header">
+            <span class="tiny-icon document-icon" aria-hidden="true"></span>
+            <div>
+              <h3 id="problem-title">Pega aquí tu problema</h3>
+              <p>La extracción es una ayuda inicial; revisa la tabla antes de calcular.</p>
+            </div>
+          </div>
+          <textarea id="problemText" rows="7" placeholder="Producto P1 demanda 100 unidades y cuesta 50 Bs; Producto P2 demanda 500 unidades y cuesta 8 Bs; Producto P3 demanda 1000 unidades y cuesta 1 Bs."></textarea>
+          <div class="button-row">
+            <button class="button secondary" id="parseProblemBtn" type="button">Extraer datos del texto</button>
+          </div>
+          <p class="helper-text">Si el texto no se reconoce correctamente, revisa la tabla antes de calcular. No se inventan demanda ni costo si no aparecen en el problema.</p>
+        </section>
+
+        <section class="panel input-panel" aria-labelledby="input-title">
+          <div class="panel-header">
+            <span class="tiny-icon table-icon" aria-hidden="true"></span>
+            <div>
+              <h3 id="input-title">Tabla editable de productos</h3>
+              <p>Usa valores anuales de demanda y costo unitario en Bs.</p>
+            </div>
+          </div>
+
+          <div class="toolbar">
+            <button class="button ghost" id="addRowBtn" type="button">Agregar producto</button>
+            <button class="button ghost" id="loadExampleBtn" type="button">Cargar ejemplo</button>
+            <button class="button danger" id="clearBtn" type="button">Limpiar datos</button>
+          </div>
+
+          <div class="table-shell input-shell">
+            <table class="input-table" aria-describedby="input-title">
+              <thead>
+                <tr>
+                  <th>Producto</th>
+                  <th>Demanda anual</th>
+                  <th>Costo unitario</th>
+                  <th>Acción</th>
+                </tr>
+              </thead>
+              <tbody id="productRows"></tbody>
+            </table>
+          </div>
+
+          <div class="calculate-bar">
+            <button class="button primary" id="calculateBtn" type="button">Calcular clasificación ABC</button>
+            <div id="messageArea" class="message-area" role="status" aria-live="polite"></div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="section results-section is-hidden" id="resultsSection" aria-live="polite">
+      <div class="section-heading compact">
+        <p class="eyebrow">Resultado verificable</p>
+        <h2>Clasificación ABC calculada</h2>
+        <p>Los productos se ordenan por valor anual de consumo y se clasifican con base en el porcentaje acumulado.</p>
+      </div>
+
+      <div class="summary-grid" id="summaryCards"></div>
+
+      <section class="quick-reading" aria-labelledby="quick-title">
+        <div>
+          <p class="eyebrow">Lectura rápida del resultado</p>
+          <h3 id="quick-title">Interpretación gerencial</h3>
+        </div>
+        <ul id="quickReadingList"></ul>
+      </section>
+
+      <div class="table-shell">
+        <table class="results-table">
+          <caption>Tabla final del Análisis ABC</caption>
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Demanda anual</th>
+              <th>Costo unitario</th>
+              <th>Valor anual de consumo</th>
+              <th>% individual</th>
+              <th>% acumulado</th>
+              <th>ABC</th>
+              <th>Recomendación de control</th>
+            </tr>
+          </thead>
+          <tbody id="resultsRows"></tbody>
+        </table>
+      </div>
+
+      <section class="charts-section" aria-labelledby="charts-title">
+        <div class="panel-header">
+          <span class="tiny-icon chart-icon" aria-hidden="true"></span>
+          <div>
+            <h3 id="charts-title">Visualizaciones</h3>
+            <p>Compara el valor anual y observa cómo crece el porcentaje acumulado.</p>
+          </div>
+        </div>
+        <div class="charts-grid">
+          <article class="chart-panel">
+            <h4>Valor anual por producto</h4>
+            <div class="bar-chart" id="barChart" aria-label="Gráfico de barras de valor anual"></div>
+          </article>
+          <article class="chart-panel">
+            <h4>Curva acumulada</h4>
+            <div class="line-chart-wrap">
+              <svg id="lineChart" class="line-chart" role="img" aria-label="Gráfico de línea de porcentaje acumulado"></svg>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="step-section" aria-labelledby="step-title">
+        <div class="panel-header">
+          <span class="tiny-icon steps-icon" aria-hidden="true"></span>
+          <div>
+            <h3 id="step-title">Explicación paso a paso</h3>
+            <p>Una lectura pensada para explicar el ejercicio en clase.</p>
+          </div>
+        </div>
+        <div id="stepExplanation" class="step-explanation"></div>
+      </section>
+    </section>
+
+    <section class="section mistakes-section" id="errores">
+      <div class="section-heading compact">
+        <p class="eyebrow">Antes de entregar</p>
+        <h2>Errores comunes</h2>
+      </div>
+      <div class="mistake-grid">
+        <article>Clasificar por cantidad de unidades en lugar de valor anual.</article>
+        <article>Olvidar ordenar de mayor a menor.</article>
+        <article>No calcular el porcentaje acumulado.</article>
+        <article>Tomar los porcentajes A, B y C como reglas exactas.</article>
+        <article>Confundir análisis ABC con inventario de seguridad o lote económico de compra.</article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>ABC Inventarios: Analizador Inteligente. Herramienta educativa centrada en clasificación por valor anual de consumo.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
